@@ -1,0 +1,84 @@
+html{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+body{
+    text-align: center;
+}
+h1{
+    font-family: 'Noto Serif TC', serif;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+.button{
+    margin: 10px 50px 50px;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    border-radius: 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #e7b5d7, #d7f2ff);
+    background-image: -moz-linear-gradient(top, #e7b5d7, #d7f2ff);
+    background-image: -ms-linear-gradient(top, #e7b5d7, #d7f2ff);
+    background-image: -o-linear-gradient(top, #e7b5d7, #d7f2ff);
+    background-image: linear-gradient(to bottom, #e7b5d7, #d7f2ff);
+}
+.button span {
+    cursor: pointer;
+    display: inline;
+    position: relative;
+    transition: 0.5s;
+  }
+.button span:after {
+    content: '\00bb';  /* CSS Entities. 如果用的是 HTML Entities, 请改成 &#8594;*/
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover span {
+    padding-right: 25px;
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}  
+.box1{
+    border:solid #593207;
+    border-width: 2px 3px 2px 5px;
+    margin: 50px 50px 20px;
+    border-radius: 90% 6% 93% 5% / 5% 94% 7% 95%;
+    padding: 20px 70px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    background-color: rgb(206, 177, 177);
+}
+.box2{
+    border:solid #593207;
+    border-width: 2px 3px 2px 5px;
+    margin: 50px 70px 20px;
+    border-radius: 90% 6% 93% 5% / 5% 94% 7% 95%;
+    padding: 20px 70px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    background-color: rgb(206, 177, 177);
+}
+.box3{
+    border:solid #593207;
+    border-width: 2px 3px 2px 5px;
+    margin: 50px 50px 20px;
+    border-radius: 90% 6% 93% 5% / 5% 94% 7% 95%;
+    padding: 20px 70px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    background-color: rgb(206, 177, 177);
+}
+li{
+    display: inline;
+    text-align: center;
+}
+#photo{
+    margin: 50px 50px 50px;
+}
