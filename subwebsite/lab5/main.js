@@ -41,8 +41,8 @@ function onPlayerStateChange(event){
         else{
             currentPlay = 0;
             player.cueVideoById({
-                videoId:playList[currentPlay][0],
-                startSeconds:playTime[currentPlay][1],
+                videoId:playList[currentPlay],
+                startSeconds:playTime[currentPlay][0],
                 endSeconds:playTime[currentPlay][1],
                 suggestedQuality:"large"
             });
