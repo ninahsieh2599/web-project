@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Galaxy Tours</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Galaxy Tours</h1>
+        <div id="app">
+            <h2 :class="h2ClassController">{{productName}}</h2>
+            <p :style="pStyleController">{{productDescription}}</p>
+            <!--key 區分每筆資料是否重複產生(區分性) identify -->
+            <table v-for="(productClass, index) in productClasses" :key="index" width="100%">
+                <tr>
+                    <td width="20%">{{productClass.name}}</td>
+                    <td width="20%">US${{productClass.price.toLocaleString('en-US')}}</td>
+                    <td>
+                        <button style="width: 35%" v-if="productClass.earlyBird">Book EarlyBird</button>
+                        <button style="width: 35%" v-else>Book</button>
+                        <span v-show="productClass.seatsAvailable < 10" style="color: red">&nbsp;
+                            Almost Sold out!
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            <img :src="imageSrc[Math.floor(Math.random()*imageSrc.length)]"
+                 :style="imageStlyeController"
+                 :alt="imageAlt"
+                 :title="imageAlt">
+        </div>
+        <script src="https:/unpkg.com/vue@next"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
